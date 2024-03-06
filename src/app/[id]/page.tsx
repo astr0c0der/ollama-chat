@@ -50,11 +50,10 @@ export default function Page({ params }: { params: { id: string } }) {
   // When starting a new chat, append the messages to the local storage
   React.useEffect(() => {
     if (!isLoading && !error && messages.length > 0) {
-      localStorage.setItem(`chat_${params.id}`, JSON.stringify(messages));
-      // Trigger the storage event to update the sidebar component
-      window.dispatchEvent(new Event("storage"));
+        localStorage.setItem(`chat_${params.id}`, JSON.stringify(messages));
+        window.dispatchEvent(new Event("storage")); // Trigger the storage event to update the sidebar component
     }
-  }, [messages, chatId, isLoading, error]);
+  }, [messages, chatId, isLoading, error, params.id]); // added params.id
 
   return (
     <main className="flex h-[calc(100dvh)] flex-col items-center">

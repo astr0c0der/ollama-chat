@@ -62,7 +62,7 @@ export function Sidebar({
     return () => {
       window.removeEventListener("storage", handleStorageChange);
     };
-  }, []);
+  }, [chatId]);
 
   const getLocalstorageChats = (): {
     chatId: string;
