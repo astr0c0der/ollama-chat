@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+/* import React, { useEffect } from "react";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/select";
 
 import { DownloadIcon } from "@radix-ui/react-icons";
-import PullModelForm from "./pull-model-form";
+import PullModelForm from "./pull-model-form--";
 
 export default function PullModel() {
 
@@ -36,3 +36,4 @@ export default function PullModel() {
     </Dialog>
   );
 }
+*/
