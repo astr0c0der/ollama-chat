@@ -27,7 +27,7 @@ export default function Page({ params }: { params: { id: string } }) {
         setMessages(JSON.parse(item));
       }
     }
-  }, [setMessages]);
+  }, [setMessages, params.id]);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
